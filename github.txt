@@ -1,9 +1,15 @@
 - Logar no github.com
 - Criar novo repositorio
+- Entrar na pasta do projeto e digitar os seguintes comandos:
 echo "# aula01" >> README.md
 git init
-git add README.md
+git add .
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/andreluizfrancabatista/aula01.git
 git push -u origin main
+
+- Para atualizar o repositorio:
+git add .
+git commit -m "first commit"
+git push origin main
