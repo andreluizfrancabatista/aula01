@@ -2,3 +2,6 @@ npm install pug
 app.set('views', './views')
 app.set('view engine', 'pug')
 new folder: views
+example.json com objeto json
+const example = require('./example.json')
+res.render('index', example);

@@ -2,14 +2,13 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const port = 3000
+const example = require('./example.json')
 
 app.set('views', './views')
 app.set('view engine', 'pug')
 
 app.get('/', (req, res) => {
-    // res.sendFile('Hello world'); // isso gera erro
-    //res.sendFile(path.join(__dirname, 'index.html')); //isso funciona
-    res.render('index', { title: 'Hey', message: 'Hello there PUG!' })
+    res.render('index', example);
 });
 
 app.get('/flights/:from-:to', (req, res) => {
@@ -23,6 +22,7 @@ app.use(function (req, res, next) {
 
 app.listen(port, () => {
     console.log(`Server listen at port ${port}`);
+    console.log(example);
 });
 
 
