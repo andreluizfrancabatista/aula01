@@ -3,9 +3,13 @@ const app = express()
 const path = require('path')
 const port = 3000
 
+app.set('views', './views')
+app.set('view engine', 'pug')
+
 app.get('/', (req, res) => {
     // res.sendFile('Hello world'); // isso gera erro
-    res.sendFile(path.join(__dirname, 'index.html')); //isso funciona
+    //res.sendFile(path.join(__dirname, 'index.html')); //isso funciona
+    res.render('index', { title: 'Hey', message: 'Hello there PUG!' })
 });
 
 app.get('/flights/:from-:to', (req, res) => {

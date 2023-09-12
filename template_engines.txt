@@ -1,0 +1,4 @@
+npm install pug
+app.set('views', './views')
+app.set('view engine', 'pug')
+new folder: views
